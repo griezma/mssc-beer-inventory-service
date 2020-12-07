@@ -1,8 +1,8 @@
-package guru.sfg.beer.inventory.service.web.controllers;
+package griezma.mssc.beerinventory.web.controllers;
 
-import guru.sfg.beer.inventory.service.repositories.BeerInventoryRepository;
-import guru.sfg.beer.inventory.service.web.mappers.BeerInventoryMapper;
-import guru.sfg.beer.inventory.service.web.model.BeerInventoryDto;
+import griezma.mssc.beerinventory.repositories.BeerInventoryRepository;
+import griezma.mssc.beerinventory.web.mappers.BeerInventoryMapper;
+import griezma.mssc.beerinventory.web.model.BeerInventoryDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;

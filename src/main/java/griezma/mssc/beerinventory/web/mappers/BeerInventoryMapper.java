@@ -1,7 +1,7 @@
-package guru.sfg.beer.inventory.service.web.mappers;
+package griezma.mssc.beerinventory.web.mappers;
 
-import guru.sfg.beer.inventory.service.domain.BeerInventory;
-import guru.sfg.beer.inventory.service.web.model.BeerInventoryDto;
+import griezma.mssc.beerinventory.domain.BeerInventory;
+import griezma.mssc.beerinventory.web.model.BeerInventoryDto;
 import org.mapstruct.Mapper;
 
 /**

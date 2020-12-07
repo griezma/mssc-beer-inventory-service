@@ -14,7 +14,7 @@
  *     You should have received a copy of the GNU General Public License
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-package guru.sfg.beer.inventory.service.domain;
+package griezma.mssc.beerinventory.domain;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

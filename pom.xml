@@ -8,11 +8,11 @@
         <version>2.4.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>guru.springframework</groupId>
+    <groupId>griezma.mssc</groupId>
     <artifactId>mssc-beer-inventory-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>mssc-beer-inventory-service</name>
-    <description>MSSC Beer Inventory Service</description>
+    <description>MSSC Beer Inventory Service; based on Ken Thompson SFG course</description>
 
     <properties>
         <java.version>11</java.version>

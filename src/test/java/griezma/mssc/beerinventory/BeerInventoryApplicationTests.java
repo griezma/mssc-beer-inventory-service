@@ -1,4 +1,4 @@
-package guru.sfg.beer.inventory.service;
+package griezma.mssc.beerinventory;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
