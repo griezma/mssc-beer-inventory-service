@@ -1,4 +1,4 @@
-package griezma.mssc.beerservice.api.model;
+package griezma.mssc.brewery.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;

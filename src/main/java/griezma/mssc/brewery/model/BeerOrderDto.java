@@ -14,46 +14,30 @@
  *     You should have received a copy of the GNU General Public License
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-package griezma.mssc.beerinventory.domain;
+
+package griezma.mssc.brewery.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Type;
-import org.hibernate.annotations.UpdateTimestamp;
 
-import javax.persistence.*;
-import java.sql.Timestamp;
+import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.UUID;
 
-/**
- * Created by jt on 2019-01-26.
- */
+@Data
+@NoArgsConstructor @AllArgsConstructor @Builder
+public class BeerOrderDto {
 
-@Setter
-@Getter
-@NoArgsConstructor @AllArgsConstructor
-@MappedSuperclass
-public class BaseEntity {
-
-    @Id
-    @GeneratedValue
     private UUID id;
 
-    @Version
-    private Long version;
+    private OffsetDateTime createdDate;
+    private OffsetDateTime lastModifiedDate;
 
-    @CreationTimestamp
-    @Column(updatable = false)
-    private Timestamp created;
-
-    @UpdateTimestamp
-    private Timestamp lastModified;
-
-    public boolean isNew() {
-        return this.id == null;
-    }
+    private UUID customerId;
+    private String customerRef;
+    private List<BeerOrderLineDto> beerOrderLines;
+    private OrderStatus orderStatus;
+    private String orderStatusCallbackUrl;
 }

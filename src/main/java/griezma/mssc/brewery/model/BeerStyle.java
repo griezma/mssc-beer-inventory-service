@@ -1,4 +1,4 @@
-package griezma.mssc.beerservice.api.model;
+package griezma.mssc.brewery.model;
 
 public enum BeerStyle {
     PALE_ALE,

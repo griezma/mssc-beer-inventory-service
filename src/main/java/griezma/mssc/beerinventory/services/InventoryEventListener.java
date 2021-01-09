@@ -1,7 +1,7 @@
 package griezma.mssc.beerinventory.services;
 
 import griezma.mssc.beerinventory.config.JmsConfig;
-import griezma.mssc.beerservice.events.BeerInventoryEvent;
+import griezma.mssc.brewery.model.events.BeerInventoryEvent;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Service;
