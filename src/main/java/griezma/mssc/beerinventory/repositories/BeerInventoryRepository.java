@@ -16,7 +16,7 @@
  */
 package griezma.mssc.beerinventory.repositories;
 
-import griezma.mssc.beerinventory.domain.BeerInventory;
+import griezma.mssc.beerinventory.entities.BeerInventory;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

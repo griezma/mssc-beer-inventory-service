@@ -3,8 +3,9 @@ package griezma.mssc.brewery.model.events;
 import griezma.mssc.brewery.model.BeerOrderDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Data @AllArgsConstructor
+@Data @AllArgsConstructor @NoArgsConstructor
 public class AllocateOrderRequest {
-    private final BeerOrderDto order;
+    private BeerOrderDto order;
 }

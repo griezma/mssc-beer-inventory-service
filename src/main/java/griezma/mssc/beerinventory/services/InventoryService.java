@@ -1,6 +1,6 @@
 package griezma.mssc.beerinventory.services;
 
-import griezma.mssc.beerinventory.domain.BeerInventory;
+import griezma.mssc.beerinventory.entities.BeerInventory;
 import griezma.mssc.beerinventory.repositories.BeerInventoryRepository;
 import griezma.mssc.brewery.model.BeerDto;
 import lombok.RequiredArgsConstructor;

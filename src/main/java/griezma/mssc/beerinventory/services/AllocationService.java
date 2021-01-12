@@ -1,7 +1,7 @@
 package griezma.mssc.beerinventory.services;
 
 import griezma.mssc.beerinventory.config.JmsConfig;
-import griezma.mssc.beerinventory.domain.BeerInventory;
+import griezma.mssc.beerinventory.entities.BeerInventory;
 import griezma.mssc.beerinventory.repositories.BeerInventoryRepository;
 import griezma.mssc.brewery.model.BeerOrderDto;
 import griezma.mssc.brewery.model.BeerOrderLineDto;
@@ -36,7 +36,7 @@ public class AllocationService {
     public boolean allocateOrder(BeerOrderDto order) {
         log.debug("allocateOrder {}", order);
         int totalOrdered = 0, totalAllocated = 0;
-        for (BeerOrderLineDto orderLine : order.getBeerOrderLines()) {
+        for (BeerOrderLineDto orderLine : order.getOrderLines()) {
             totalOrdered += orderLine.getOrderQuantity();
             totalAllocated += allocateOrderLine(orderLine);
         }

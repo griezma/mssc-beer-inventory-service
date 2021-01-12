@@ -1,6 +1,6 @@
 package griezma.mssc.beerinventory.services;
 
-import griezma.mssc.beerinventory.domain.BeerInventory;
+import griezma.mssc.beerinventory.entities.BeerInventory;
 import griezma.mssc.beerinventory.repositories.BeerInventoryRepository;
 import griezma.mssc.brewery.model.BeerOrderDto;
 import griezma.mssc.brewery.model.BeerOrderLineDto;
@@ -85,7 +85,7 @@ class AllocationServiceTest {
                 .lastModifiedDate(OffsetDateTime.now())
                 .orderStatus(OrderStatus.ALLOCATION_PENDING)
                 .customerId(UUID.randomUUID())
-                .beerOrderLines(List.of(beerOrderLine(beerId, quantity)))
+                .orderLines(List.of(beerOrderLine(beerId, quantity)))
                 .build();
     }
 

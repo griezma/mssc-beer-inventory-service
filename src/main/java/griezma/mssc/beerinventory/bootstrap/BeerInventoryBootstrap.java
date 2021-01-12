@@ -1,7 +1,7 @@
 package griezma.mssc.beerinventory.bootstrap;
 
 import griezma.mssc.beerinventory.repositories.BeerInventoryRepository;
-import griezma.mssc.beerinventory.domain.BeerInventory;
+import griezma.mssc.beerinventory.entities.BeerInventory;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
