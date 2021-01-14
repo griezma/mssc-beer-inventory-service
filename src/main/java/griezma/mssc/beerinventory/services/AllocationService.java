@@ -14,6 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.support.TransactionSynchronizationManager;
 
 import javax.transaction.Transactional;
 
@@ -40,6 +41,8 @@ public class AllocationService {
 
     @Transactional
     public boolean allocateOrder(BeerOrderDto order) {
+        assert TransactionSynchronizationManager.isActualTransactionActive() : "tx required";
+
         log.debug("allocateOrder {}", order);
         int totalOrdered = 0, totalAllocated = 0;
         for (BeerOrderLineDto orderLine : order.getOrderLines()) {

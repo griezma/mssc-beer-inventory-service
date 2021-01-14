@@ -1,33 +1,40 @@
 package griezma.mssc.beerinventory.services;
 
+import griezma.mssc.beerinventory.config.JmsConfig;
 import griezma.mssc.beerinventory.data.BeerInventory;
 import griezma.mssc.beerinventory.data.BeerInventoryRepository;
 import griezma.mssc.brewery.model.BeerOrderDto;
 import griezma.mssc.brewery.model.BeerOrderLineDto;
 import griezma.mssc.brewery.model.BeerStyle;
 import griezma.mssc.brewery.model.OrderStatus;
+import griezma.mssc.brewery.model.events.AllocateOrderRequest;
 import griezma.mssc.brewery.model.events.AllocateOrderResponse;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.boot.test.mock.mockito.SpyBean;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.test.context.ActiveProfiles;
 
 import java.math.BigDecimal;
+import java.time.Duration;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.UUID;
 
+import static org.awaitility.Awaitility.await;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.BDDMockito.any;
 import static org.mockito.BDDMockito.given;
+import static org.mockito.Mockito.verify;
 
 @SpringBootTest
 @ActiveProfiles("test")
 class AllocationServiceTest {
-    @Autowired
+    @SpyBean
     AllocationService service;
 
     @Autowired
@@ -67,6 +74,15 @@ class AllocationServiceTest {
         var order = validOrder(beerId, 143);
 
         assertFalse(service.allocateOrder(order));
+    }
+
+    @Test
+    void allocateOrderRequestIsForwarded() {
+        BeerOrderDto order = validOrder(UUID.randomUUID(), 100);
+
+        jms.convertAndSend(JmsConfig.ALLOCATEORDER_REQUEST_QUEUE, new AllocateOrderRequest(order));
+
+        await().atMost(Duration.ofMillis(500)).untilAsserted(() -> verify(service).allocateOrder(eq(order)));
     }
 
     BeerInventory inventory(UUID beerId, int quantity) {
