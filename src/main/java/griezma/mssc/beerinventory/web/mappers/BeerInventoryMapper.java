@@ -1,6 +1,6 @@
 package griezma.mssc.beerinventory.web.mappers;
 
-import griezma.mssc.beerinventory.entities.BeerInventory;
+import griezma.mssc.beerinventory.data.BeerInventory;
 import griezma.mssc.beerinventory.web.model.BeerInventoryDto;
 import org.mapstruct.Mapper;
 

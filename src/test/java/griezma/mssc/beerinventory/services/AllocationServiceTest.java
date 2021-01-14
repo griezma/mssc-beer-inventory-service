@@ -1,7 +1,7 @@
 package griezma.mssc.beerinventory.services;
 
-import griezma.mssc.beerinventory.entities.BeerInventory;
-import griezma.mssc.beerinventory.repositories.BeerInventoryRepository;
+import griezma.mssc.beerinventory.data.BeerInventory;
+import griezma.mssc.beerinventory.data.BeerInventoryRepository;
 import griezma.mssc.brewery.model.BeerOrderDto;
 import griezma.mssc.brewery.model.BeerOrderLineDto;
 import griezma.mssc.brewery.model.BeerStyle;

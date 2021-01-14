@@ -16,6 +16,8 @@ public class JmsConfig {
     public static final String INVENTORY_EVENT_QUEUE = "beer-inventory-event";
     public static final String ALLOCATEORDER_REQUEST_QUEUE = "allocateorder-request";
     public static final String ALLOCATEORDER_RESPONSE_QUEUE = "allocateorder-response";
+    public static final String DEALLOCATE_ORDER_QUEUE = "deallocate-order";
+    public static final String DEALLOCATE_ORDER_RESPONSE_QUEUE = "deallocate-order-response";
 
     @Bean
     MessageConverter jsonConverter(ObjectMapper om) {

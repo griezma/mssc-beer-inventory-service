@@ -1,4 +1,4 @@
-package griezma.mssc.beerinventory.entities;
+package griezma.mssc.beerinventory.data;
 
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
