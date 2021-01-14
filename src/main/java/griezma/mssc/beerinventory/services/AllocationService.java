@@ -63,7 +63,7 @@ public class AllocationService {
                 break;
             }
         }
-        orderLine.setAllocationQuantity(orderLine.getOrderQuantity() - quantityToFill);
-        return orderLine.getAllocationQuantity();
+        orderLine.setAllocatedQuantity(orderLine.getOrderQuantity() - quantityToFill);
+        return orderLine.getAllocatedQuantity();
     }
 }
