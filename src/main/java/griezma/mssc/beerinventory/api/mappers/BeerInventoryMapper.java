@@ -1,7 +1,7 @@
-package griezma.mssc.beerinventory.web.mappers;
+package griezma.mssc.beerinventory.api.mappers;
 
 import griezma.mssc.beerinventory.data.BeerInventory;
-import griezma.mssc.beerinventory.web.model.BeerInventoryDto;
+import griezma.mssc.beerinventory.api.model.BeerInventoryDto;
 import org.mapstruct.Mapper;
 
 @Mapper(uses = DateMapper.class)

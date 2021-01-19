@@ -1,4 +1,4 @@
-package griezma.mssc.beerinventory.web.model;
+package griezma.mssc.beerinventory.api.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

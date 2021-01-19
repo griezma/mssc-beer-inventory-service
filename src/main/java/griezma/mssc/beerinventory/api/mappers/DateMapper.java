@@ -15,7 +15,7 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package griezma.mssc.beerinventory.web.mappers;
+package griezma.mssc.beerinventory.api.mappers;
 
 import org.springframework.stereotype.Component;
 
