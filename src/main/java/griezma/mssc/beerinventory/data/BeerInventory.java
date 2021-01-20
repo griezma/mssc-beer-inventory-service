@@ -32,9 +32,6 @@ public class BeerInventory {
     @Column(updatable = false)
     private UUID beerId;
 
-    @Column(updatable = false)
-    private String upc;
-
     private int quantityOnHand = 0;
 }
 

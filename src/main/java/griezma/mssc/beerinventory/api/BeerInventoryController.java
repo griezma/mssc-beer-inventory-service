@@ -1,7 +1,7 @@
 package griezma.mssc.beerinventory.api;
 
 import griezma.mssc.beerinventory.api.mappers.BeerInventoryMapper;
-import griezma.mssc.beerinventory.api.model.BeerInventoryDto;
+import griezma.mssc.brewery.model.BeerInventoryDto;
 import griezma.mssc.beerinventory.data.BeerInventoryRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

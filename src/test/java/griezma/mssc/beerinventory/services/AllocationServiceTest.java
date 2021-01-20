@@ -15,7 +15,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.mock.mockito.SpyBean;
 import org.springframework.jms.core.JmsTemplate;
-import org.springframework.test.context.ActiveProfiles;
 
 import java.math.BigDecimal;
 import java.time.Duration;
@@ -32,7 +31,6 @@ import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.verify;
 
 @SpringBootTest
-@ActiveProfiles("test")
 class AllocationServiceTest {
     @SpyBean
     AllocationService service;
@@ -88,7 +86,6 @@ class AllocationServiceTest {
     BeerInventory inventory(UUID beerId, int quantity) {
         return BeerInventory.builder()
                 .beerId(beerId)
-                .upc(beerId.toString())
                 .quantityOnHand(quantity)
                 .build();
 

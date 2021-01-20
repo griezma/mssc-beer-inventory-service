@@ -24,7 +24,6 @@ public class InventoryService {
     private BeerInventory initialInventory(BeerDto beer) {
         return BeerInventory.builder()
                 .beerId(beer.getId())
-                .upc(beer.getUpc())
                 .quantityOnHand(beer.getQuantityOnHand())
                 .build();
     }

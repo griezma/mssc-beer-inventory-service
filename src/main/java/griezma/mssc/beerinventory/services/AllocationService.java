@@ -96,7 +96,6 @@ public class AllocationService {
     private void deallocateOrderLine(BeerOrderLineDto orderLine) {
         BeerInventory deallocated = BeerInventory.builder()
                 .beerId(orderLine.getBeerId())
-                .upc(orderLine.getUpc())
                 .quantityOnHand(orderLine.getAllocatedQuantity())
                 .build();
         repo.save(deallocated);

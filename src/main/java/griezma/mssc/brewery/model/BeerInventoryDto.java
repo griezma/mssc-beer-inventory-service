@@ -1,4 +1,4 @@
-package griezma.mssc.beerinventory.api.model;
+package griezma.mssc.brewery.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,6 +17,5 @@ public class BeerInventoryDto {
     private OffsetDateTime created;
     private OffsetDateTime lastModified;
     private UUID beerId;
-    private String upc;
     private Integer quantityOnHand;
 }
