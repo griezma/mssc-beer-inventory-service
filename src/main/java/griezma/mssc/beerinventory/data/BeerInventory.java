@@ -13,6 +13,7 @@ import java.util.UUID;
 public class BeerInventory {
     @Id
     @GeneratedValue
+    @Column(columnDefinition = "char(36)", updatable = false)
     private UUID id;
 
     @Version
